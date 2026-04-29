@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pytest httpx fastapi uvicorn \
-            langchain langchain-openai langchain-anthropic \
+            langchain langchain-core langchain-openai langchain-anthropic \
             faiss-cpu rank-bm25 openai anthropic \
             pydantic python-dotenv pypdf tiktoken
 
