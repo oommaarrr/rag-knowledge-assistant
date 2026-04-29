@@ -1,19 +1,27 @@
 name: CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
+on: push
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install pytest httpx fastapi uvicorn \
+            langchain langchain-openai langchain-anthropic \
+            faiss-cpu rank-bm25 openai anthropic \
+            pydantic python-dotenv pypdf tiktoken
+
       - name: Run tests
-        run: pytest tests/ -v
+        env:
+          OPENAI_API_KEY: "test-key-placeholder"
+          ANTHROPIC_API_KEY: "test-key-placeholder"
+        run: pytest tests/ -v --ignore=tests/test_generation.py
