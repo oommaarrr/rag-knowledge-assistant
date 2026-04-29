@@ -2,7 +2,7 @@
 import faiss
 import numpy as np
 from typing import List, Tuple
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 
 class DenseRetriever:

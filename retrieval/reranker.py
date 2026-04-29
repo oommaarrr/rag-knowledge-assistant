@@ -1,7 +1,7 @@
 """Cross-encoder reranker."""
 from sentence_transformers import CrossEncoder
 from typing import List, Tuple
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 

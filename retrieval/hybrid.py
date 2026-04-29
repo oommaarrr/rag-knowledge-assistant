@@ -1,6 +1,6 @@
 """Hybrid retrieval: fuse dense + sparse scores with RRF."""
 from typing import List, Tuple
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 
 def reciprocal_rank_fusion(

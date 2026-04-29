@@ -1,7 +1,7 @@
 """LLM generation with source citation."""
 import os
 from typing import List
-from langchain.schema import Document
+from langchain_core.documents import Document
 from generation.prompt import SYSTEM_PROMPT, build_prompt
 
 
