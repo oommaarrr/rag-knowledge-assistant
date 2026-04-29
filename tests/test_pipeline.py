@@ -1,6 +1,6 @@
 """CI test suite."""
 import pytest
-from langchain.schema import Document
+from langchain_core.documents import Document
 from retrieval.sparse import SparseRetriever
 from retrieval.hybrid import reciprocal_rank_fusion
 
