@@ -1,7 +1,7 @@
 """BM25 sparse retriever."""
 from rank_bm25 import BM25Okapi
 from typing import List, Tuple
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 
 class SparseRetriever:
