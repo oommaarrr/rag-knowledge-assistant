@@ -27,9 +27,4 @@ jobs:
         run: pytest tests/ -v --ignore=tests/test_generation.py
 
       - name: Install dependencies
-        run: |
-          pip install pytest httpx fastapi uvicorn \
-            langchain langchain-core langchain-openai langchain-anthropic \
-            langchain-text-splitters \
-            faiss-cpu rank-bm25 openai anthropic \
-            pydantic python-dotenv pypdf tiktoken
+        run: pip install pytest httpx fastapi uvicorn langchain langchain-core langchain-openai langchain-anthropic langchain-text-splitters faiss-cpu rank-bm25 openai anthropic pydantic python-dotenv pypdf tiktoken
